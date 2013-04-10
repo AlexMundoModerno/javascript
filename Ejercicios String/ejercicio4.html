@@ -1,0 +1,50 @@
+<html>
+<head>
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+
+	palabra = new Array();  //creamos el array con nombre palabra
+	palabra=prompt("introduce una palabra");  //guardamos el texto introducido por teclado en el array palabra
+	console.log(palabra);
+	
+	document.write(palabra+" ");
+
+	var ini=0;
+	var fin=palabra.length;
+	
+	var seguir=1;
+	
+	
+	
+	while((seguir==1)&&(fin!=0))
+	{
+		if ((palabra[ini])==(palabra[fin-1]))
+		{
+		ini++;
+		fin--;
+		}
+		else
+		{
+		seguir=0;
+		}
+	}		
+
+	if (seguir==1)
+	{
+	document.write("Es palindromo");
+	}
+	else
+	{
+	document.write("NO es palindromo");
+	}
+																	
+	</script>
+
+
+</body>
+
+</html>

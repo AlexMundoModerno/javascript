@@ -1,0 +1,110 @@
+<html>
+<head>
+	<script type="text/javascript">
+
+	cadena = new Array();
+	cadena=prompt("introduce una cadena");
+	
+	var longitudCadena=cadena.length;
+	
+	console.log(longitudCadena);
+	
+	function a()
+	{
+		var mitad=0;
+		var j=0;
+	
+		if(longitudCadena%2==0)  //longitud par
+			{
+			mitad=(longitudCadena/2);
+			console.log(mitad);
+			}
+			else /*(longitudCadena%2!=0) */ //longitud impar           
+			{
+			mitad=((longitudCadena+1)/2);  //la mitad de la cadena redondeando hacia arriba
+			console.log(mitad);
+			}
+	
+		document.write("la mitad de los caracteres de la cadena son: ");
+		while(mitad!=j)
+		{
+	
+		document.write(cadena[j]);
+		j++;
+		}
+	}
+
+	function b()
+	{
+		document.write("<br> el ultimo caracter es: " + cadena[longitudCadena-1]);
+	}
+	
+	
+	function c()
+	{
+	
+		var reves=0;
+		reves=longitudCadena;
+	
+		console.log("reves: "+reves);
+	
+		document.write("<br> la cadena al reves es: ");
+		while(reves!=0)
+		{	
+		document.write(cadena[reves-1]);
+		reves--;
+		}
+	
+	
+	}
+	
+	function d()
+	{	
+		var i=0;
+		document.write("<br> cadena de texto separada por guiones: ");
+		while(i!=longitudCadena)
+		{
+			document.write(cadena[i]);
+			i++;
+				if(i!=longitudCadena)	
+				{
+				document.write("-");
+				}
+		}
+	}
+	
+	function e()
+	{
+	
+		vocales = new Array(5);
+		vocales = new Array("a","e","i","o","u");
+		
+		console.log(vocales);
+		
+		var k=0;
+		var j=0;
+		var contVocales=0;
+			
+			for(j=0; j<=longitudCadena; j++)
+			{
+				for(k=0; k<5; k++)
+				{
+					if (cadena[j]==vocales[k])
+					{
+					contVocales++;
+					k=5;
+					}
+				}
+	
+			}
+	
+			document.write("<br>La cadena tiene: "+contVocales+" vocales");
+	}
+	
+
+	</script>
+</head>
+<body onload="a(); b(); c(); d(); e();">
+
+</body>
+</html>

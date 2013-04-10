@@ -1,0 +1,29 @@
+<html>
+<head>
+	<script type="text/javascript">
+
+	function separar()
+	{
+		oracion = new Array();
+		oracion=prompt("introduce la oracion para separarla");
+	
+		var blanco=" ";
+		var i=0;
+
+		for(i in oracion)  //recorre en array desde la variable "i" hasta el final del array
+		{
+			console.log(i);
+			document.write(oracion[i]);
+			if(oracion[i]==blanco)
+			{
+				document.write("<br>");	
+			}
+		
+		}
+	}
+	</script>
+</head>
+<body onload="separar();">
+
+</body>
+</html>

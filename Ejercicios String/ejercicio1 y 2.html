@@ -1,0 +1,27 @@
+<html>
+<head>
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+
+	var nombre;
+	var vcant=0; // siempre igualar a 0 las variables numero.
+	
+	do
+	{
+		nombre=prompt("Introduzca un nombre, para salir introduzca: FIN");
+		vcant++;
+		nombre=nombre.toUpperCase(); //cambia la cadena de texto a MAYUS
+	}
+	while(nombre!="FIN");
+	document.write("se han ingresado " + (vcant-1) + " nombre");
+
+</script>
+
+
+</body>
+
+</html>
