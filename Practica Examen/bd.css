@@ -1,0 +1,173 @@
+/*
+48036F - oscuro
+7109AA - 
+602580
+9F3ED5
+AD66D5
+
+*/
+body {
+background-color: #48036F;
+font-size: 12px;
+font-family: Arial, Verdana, SunSans-Regular, Sans-Serif;
+color:#7109AA;
+padding:0px;
+margin:0px;
+}
+a {color: #7109AA;}
+a:visited {color:#9F3ED5;}
+a:hover {color: #602580;}
+a:active { color:#AD66D5;}
+
+h1 {
+font-size: 12px;
+text-transform:uppercase;
+color: #ffffff;
+background-color: #9F3ED5;
+border-top:1px solid #48036F;
+border-bottom:1px solid #48036F;
+padding:5px 15px;
+margin:0px }
+h2 {
+font-size:22px;
+font-weight: normal;
+padding: 5px 10px;
+margin:0px;}
+
+img.download {vertical-align:middle;}
+
+/* ----------container to center the layout---------- */
+#container {
+width: 800px;
+padding:0px;
+margin: 0px;
+margin-left: auto;
+margin-right: auto;
+} 
+
+/* ----------banner for logo-------------- */
+#banner {
+text-align: center;
+background-color: #E5B5FF;
+color:#FaFFFF;
+padding-top: 10px;
+margin: 20px 0 0 0;
+ }
+
+#banner img {padding:10px 0px;} 
+
+/* ----------outer and inner----------------- */
+#outer{ 
+border-left: solid 200px #E5B5FF;  /* color of the left column  */ 
+background-color: #fff; /* color of the content column */
+ } 
+
+#inner{ margin:0px; width:100%; } /* The ie/pc pecularity */ 
+
+/* --------------left navi------------- */
+#left {
+ width:180px; 
+ float:left; 
+ position:relative; 
+ margin-left:-180px; 
+ margin-right:1px;
+ }
+#left ul{
+	margin-left: 10;
+	padding: 0;
+	list-style-type: none;
+
+}
+#left li{
+	margin:0 ;
+}
+
+#left li a {
+display: block;
+padding: 5px 10px;
+width: 100px;
+color: #000;
+background-color: #E5B5FF;
+text-decoration: none;
+border-top: 1px solid #fff;
+border-left: 1px solid #fff;
+border-bottom: 1px solid #333;
+border-right: 1px solid #333;
+font-weight: bold;
+font-size: .8em;
+background-image: url(images/vertical06.jpg);
+background-repeat: no-repeat;
+background-position: 0 0;
+
+}
+
+#left li a:hover {
+color: #000;
+background-color: #9F3ED5;
+text-decoration: none;
+border-top: 1px solid #333;
+border-left: 1px solid #333;
+border-bottom: 1px solid #fff;
+border-right: 1px solid #fff;
+background-position: 0 0;
+}
+#photo {
+	
+		margin-left: 10;
+	padding: 0;
+	width: 120px;
+	color: #E66;
+	text-align: center;
+}
+
+/* -----------------content--------------------- */
+#content{ 
+position: relative; 
+margin: 0px;
+ }
+
+p{
+padding: 5px 10px;
+margin:0px; }
+
+pre{
+font-size: 12px;
+padding: 5px 10px;
+margin:0px;}
+
+table {
+	margin: 0 auto;
+	/*text-align:center;*/
+	
+	font-size: 11px;
+}
+table td{
+	font-weight: 0.7em;
+	/*text-align:center;*/
+	background-color:#EBD3E0;
+	padding: 5px;
+}
+
+table th{
+	
+	/*text-align:center;*/
+	background-color:#EBDFEA;
+	padding: 5px;
+	width:100px;
+	
+}
+.blanco {
+	background-color: white;
+	color: red;
+	text-align: center;
+}
+/*  ----------------footer---------------------- */ 
+#footer {
+clear:left;
+padding:0px;
+margin:0px;
+text-align: right; } 
+
+.obligatorio {
+	background-color: #F99;
+}

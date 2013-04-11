@@ -1,0 +1,100 @@
+<html>
+	<head>
+	<title>Examen recuperación javascript</title>
+	<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+	<link rel="stylesheet" href="bd.css" type="text/css" />
+
+<script type="text/javascript">
+
+function validar()
+
+{
+	var izquierda = document.getElementById("cajaizq").value;
+	var derecha = document.getElementById("cajader").value;
+
+	console.log(izquierda);
+	console.log(derecha);
+
+
+	if((izquierda=="") && (derecha==""))
+	{
+		document.getElementById("cajaresultado").value = "campos vacíos";
+	}
+	if((izquierda!="") && (derecha!=""))
+	{
+		document.getElementById("cajaresultado").value = "ambas cajas están rellenas";
+	}
+	
+	if((izquierda=="") && (derecha!=""))
+	{
+		document.getElementById("cajaresultado").value = "la caja izquierda está vacía";
+	}
+	if((derecha=="") && (izquierda!=""))
+	{
+		document.getElementById("cajaresultado").value = "la caja derecha está vacía";
+	}
+
+
+}
+
+
+
+
+</script>
+
+	</head>
+<body>
+
+<div id="container" >
+	<div id="banner" ><h2>1º DAM - Lenguaje de Marcas</h2>
+		<h1>Examen : Javascript</h1>
+	</div>
+	<div id="outer" >
+ 		<div id="inner">
+ 			<div id="left" ><h2>Menú</h2>
+				<ul>
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="Ejercicio1.html">Ej. 1 - Javascript</a></li>
+					<li><a href="Ejercicio2.html">Ej. 2 - Javascript</a></li>
+					<li><a href="Ejercicio3.html">Ej. 3 - Javascript</a></li>
+				
+				</ul>
+				
+			</div>
+			
+
+	   		<div id="content" ><h2>Ejercicio 1 - Javascript</h2>
+				<p>Modifica el código fuente de esta página.</p>
+				<p>En esta página se muestran dos cuadros de texto y un botón. Al pulsar el botón se deberá validar los cuadros de textos y en función de los contenidos se procederá de distinta forma:</p>
+				<ul>
+				<li>Si las dos cajas de texto están vacías se mostrará el mensaje "<b>campos vacíos</b>"</li>
+				<li>Si sólo una de las cajas están vacías se mostrará el mensaje "<b>la caja izquierda está vacía</b>" o "<b>la caja derecha está vacía</b>", en función del caso.</li>
+				<li>Si ambas están rellenas se mostrará el mensaje "<b>ambas cajas están rellenas</b>".</li>
+				<li>Todos los mensajes se mostrarán justo debajo del botón donde aparece por defecto el texto "<b>resultado de la comparación</b>".</li>
+		</ul>
+				</ul>
+        <form name="formulario">
+				<table>
+					<Tr>
+						<Th colspan=5>Introduzca texto en los siguientes campos:</th>
+					</Tr>
+					<TR>
+						<td>IZQ :</td>
+						<td><input type="text" id="cajaizq" name="cajaizq"></td>
+						<td><INPUT type="button" value="Validar" onClick="validar()"></td>
+						<td><input type="text" id="cajader" name="cajader"></td>
+						<td>: DCHA</td>
+					</TR>
+					<Tr>
+						<Th colspan=5><input style="border-style:none;text-align:center;" type="text" id="cajaresultado" value="resultado de la comparación" size="50"></th>
+					</Tr>
+				</table>
+        </form>
+				<br>
+			</div><!-- end content -->
+		</div><!-- end inner -->
+	</div><!-- end outer -->
+ 	<div id="footer"><h1 align=center>EXAMEN JAVASCRIPT 2º Parcial</h1></div>
+</div><!-- end container -->
+</body>
+</html>

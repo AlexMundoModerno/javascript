@@ -1,0 +1,134 @@
+<html>
+	<head>
+	<title>Examen recuperación javascript</title>
+	<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+	<link rel="stylesheet" href="bd.css" type="text/css" />
+
+
+	<script type="text/javascript">
+
+function validarLogin()
+
+{
+	var carriba = document.getElementById("user").value;
+	var cabajo = document.getElementById("passwd").value;
+	var continuar=1;
+
+	console.log(carriba);
+	console.log(cabajo);
+
+
+	usuarios= new Array(2);
+	contrasenas= new Array(2);
+
+		usuarios[0]="paco";
+		usuarios[1]="pepe";
+
+		contrasenas[0]="paco";
+		contrasenas[1]="pepe";
+
+
+	var j=0;
+	var seguir=0;
+
+
+	if((carriba=="") || (cabajo==""))
+	{
+	alert("Los campos usuario y contraseña no pueden estar vacíos");
+	continuar=0;
+	console.log(continuar);
+	}
+
+
+	if(continuar==1)
+	{
+
+		for(j=0;j<2;j++)
+		{
+			if ((carriba==usuarios[j]) && (cabajo==contrasenas[j]))
+			{
+				window.location.replace("http://www.google.es");
+				seguir=1;
+			}
+		}
+			
+		if(seguir==0)
+		{
+			alert("Usuario y Contraseña no válidos");
+		}
+
+	}
+
+
+}
+
+
+
+
+</script>
+
+
+	</head>
+<body>
+
+<div id="container" >
+	<div id="banner" ><h2>1º DAM - Lenguaje de Marcas</h2>
+		<h1>Examen : Javascript</h1>
+	</div>
+	<div id="outer" >
+ 		<div id="inner">
+ 			<div id="left" ><h2>Menú</h2>
+				<ul>
+						<li><a href="index.html">Inicio</a></li>
+					<li><a href="Ejercicio1.html">Ej. 1 - Javascript</a></li>
+					<li><a href="Ejercicio2.html">Ej. 2 - Javascript</a></li>
+					<li><a href="Ejercicio3.html">Ej. 3 - Javascript</a></li>
+				
+				</ul>
+				
+			</div>
+			
+	   	<div id="content" ><h2>Ejercicio 3 - Javascript</h2>
+				<p>Al pulsar sobre el botón Entrar, deberá invocar a una función que valide:</p>
+				
+				<ul>
+					<li>Si los campos Usuario y Contraseña están rellenos. En el caso de que alguno de ellos esté vacío deberá mostrar el mensaje siguiente: 
+					<b>“Los campos usuario y  contraseña no pueden estar vacíos”</b>.<br> (no seguirá validando y deberá salir de la función).</li>
+					<li>Si los valores introducidos en el campo Usuario y Contraseña son valores válidos. En tal caso se redireccionará a la página <b>"http://www.google.es"</b>.</li>
+					<li>Si los valores introducidos en el campo Usuario y Contraseña no son valores válidos, mostrar el mensaje <b>“Usuario y Contraseña no válidos</b></li>
+					
+				</ul>
+					<p>Los únicos usuarios válidos son:</p>
+					<p>usuario: <b>paco</b> pass: <b>paco</b> y usuario: <b>pepe</b> pass: <b>pepe</b></p> 
+         <!-- FORMULARIO de ACCESO -->
+			<form enctype="text/plain" method="get" action="login.html" name="login">
+				<table border="0" cellpadding="2" cellspacing="2" align="center" bgcolor="">
+					<tr>
+						<td colspan="4" class="bold" >Usuarios registrados</td>
+
+					</tr>
+					<tr>
+						<td><b>Usuario :</b></td>
+						<td><input name="user" id="user" type="text" size=15></td>
+					</tr>
+					<tr>
+						<td><b>Contrase&ntilde;a :</b></td>
+
+						<td><input name="passwd" id="passwd" type="password" size=15></td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center">
+							<input name="entrar" id="entrar" value="  Entrar  " type="button" onClick="validarLogin()" >
+						</td>
+					</tr>
+				</table>
+			</form>
+				<br>
+			</div><!-- end content -->
+
+		</div><!-- end inner -->
+	</div><!-- end outer -->
+ 	<div id="footer"><h1 align=center>EXAMEN JAVASCRIPT 2º Parcial</h1></div>
+</div><!-- end container -->
+</body>
+</html>

@@ -1,0 +1,192 @@
+<html>
+	<head>
+	<title>Examen recuperación javascript</title>
+	<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+	<link rel="stylesheet" href="bd.css" type="text/css" />
+
+<script type="text/javascript">
+	
+	function Corregir()
+	{
+		var seguir=1;
+		var correctas=0;
+
+		var pregunta1=0;
+		var pregunta2=0;
+		var pregunta3=0;
+
+		var radioButtons = document.getElementsByName("radioValor1");
+		var radioButtons2 = document.getElementsByName("radioValor2");
+		var radioButtons3 = document.getElementsByName("radioValor3");
+
+
+	 
+		for (var x = 0; x < radioButtons.length; x++) 
+	    {
+     		 if (radioButtons[x].checked)
+			 {
+			 	pregunta1=radioButtons[x].value;
+			 	console.log(pregunta1);
+			 }
+
+		}
+
+		for (var x = 0; x < radioButtons2.length; x++) 
+	    {
+     		 if (radioButtons2[x].checked)
+			 {
+			 	pregunta2=radioButtons2[x].value;
+			 	console.log(pregunta2);
+			 }
+
+		}
+
+		for (var x = 0; x < radioButtons3.length; x++) 
+	    {
+     		 if (radioButtons3[x].checked)
+			 {
+			 	pregunta3=radioButtons3[x].value;
+			 	console.log(pregunta3);
+			 }
+
+		}
+
+	if(pregunta1==0 || pregunta2==0 || pregunta3==0)
+	{
+		seguir=0;
+	}
+	
+	if(seguir==1)
+	{
+
+
+		if (pregunta1==2)
+		{
+			correctas=correctas+1;
+
+		}
+
+		if (pregunta2==1)
+		{
+			correctas=correctas+1;
+		}
+
+		if (pregunta3==3)
+		{
+			correctas=correctas+1;
+			
+		}
+	}
+	
+	else 
+	{
+		alert("Debes seleccionar una respuesta para cada pregunta");
+	}		
+
+
+	document.getElementById("ccorrectas").value = correctas;
+	document.getElementById("cpuntos").value = correctas*2;
+
+	}
+
+
+
+
+</script>
+		
+
+	</head>
+<body>
+
+<div id="container" >
+	<div id="banner" ><h2>1º DAM - Lenguaje de Marcas</h2>
+		<h1>Examen : Javascript</h1>
+	</div>
+	<div id="outer" >
+ 		<div id="inner">
+ 			<div id="left" ><h2>Menú</h2>
+				<ul>
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="Ejercicio1.html">Ej. 1 - Javascript</a></li>
+					<li><a href="Ejercicio2.html">Ej. 2 - Javascript</a></li>
+					<li><a href="Ejercicio3.html">Ej. 3 - Javascript</a></li>
+				
+				</ul>
+				
+			</div>
+			
+	   	<div id="content" ><h2>Ejercicio 2 - Javascript</h2>
+				<p>En este ejercicio se plantea un simple test, que deberá ser evaluado haciendo uso del lenguaje Javascript.</p>
+				<p>Cuando se pulse el botón <b>Corregir</b> se deberá hacer una serie de validaciones:</p>
+				<ul>
+					<li>Cada pregunta debe tener una respuesta. En el caso que no seleccione una respuesta por pregunta, se mostrará un mensaje indicando "<b><i>Debes seleccionar una respuesta para cada pregunta</i></b>".</li>
+					<li>Las respuestas correctas son: Pregunta 1: Opción 2, Pregunta 2: Opción 1, Pregunta 3: Opción 3</li>
+					<li>Si todas las respuestas están contestadas, en el campo "<b>Respuestas Correctas</b>" se mostrará el número de respuestas acertadas.</li>
+					<li>Si todas las respuestas están contestadas, en el campo "<b>Puntuación</b>" se mostrará la puntuación obtenida en el test, teniendo en cuenta que se puntua cada respuesta acertada con 2 puntos.</li>
+				</ul>
+         <form name="formulario">
+				<table>
+					<TR>
+						<Td align="center" colspan=2><b>Pregunta 1</b>:<br>¿Cuál es la bola blanca?</Td>
+						<Td rowspan=4></Td>
+						<Td align="center" colspan=2><b>Pregunta 2</b>:<br>¿Cuál es la bola verde?</Td>
+						<Td rowspan=4></Td>
+						<Td align="center" colspan=2><b>Pregunta 3</b>:<br>¿Cuál es la bola morada?</Td>
+						
+					</TR>
+					
+					<TR>
+						<TD align="center"><input type="radio" name="radioValor1" id="radio1" value="1">Respuesta 1</TD>
+						<TD align="center"><img src="imagenes/roja.png"></TD>
+
+						<TD align="center"><input type="radio" name="radioValor2" id="radio2" value="1">Respuesta 1</TD>
+						<TD align="center"><img src="imagenes/verde.png"></TD>
+
+						<TD align="center"><input type="radio" name="radioValor3" id="radio3" value="1">Respuesta 1</TD>
+						<TD align="center"><img src="imagenes/azul.png"></TD>
+						
+					</TR>
+					<TR>
+						<TD align="center"><input type="radio" name="radioValor1" id="radio1" value="2">Respuesta 2</TD>
+						<TD align="center"><img src="imagenes/blanca.png"></TD>
+
+						<TD align="center"><input type="radio" name="radioValor2" id="radio2" value="2">Respuesta 2</TD>
+						<TD align="center"><img src="imagenes/negra.png"></TD>
+
+						<TD align="center"><input type="radio" name="radioValor3" id="radio3" value="2">Respuesta 2</TD>
+						<TD align="center"><img src="imagenes/rosa.png"></TD>
+						
+					</TR>
+					<TR>
+						<TD align="center"><input type="radio" name="radioValor1" id="radio1" value="3">Respuesta 3</TD>
+						<TD align="center"><img src="imagenes/amarilla.png"></TD>
+
+						<TD align="center"><input type="radio" name="radioValor2" id="radio2" value="3">Respuesta 3</TD>
+						<TD align="center"><img src="imagenes/celeste.png"></TD>
+
+						<TD align="center"><input type="radio" name="radioValor3" id="radio3" value="3">Respuesta 3</TD>
+						<TD align="center"><img src="imagenes/bola.png"></TD>
+						
+					</TR>
+					<TR>
+						<Th colspan=8><INPUT type="button" value="Corregir" onClick="Corregir();" ></Th>
+					</TR>
+					<TR>
+						<TD colspan=2>Nº Respuestas correctas:</TD>
+						<TD colspan=6><input type="text" id="ccorrectas"></TD>
+					</TR>
+					<TR>
+						<TD colspan=2>Puntuación:</TD>
+						<TD colspan=6><input type="text" id="cpuntos"></TD>
+					</TR>
+				</table>
+        </form>
+				<br>
+			</div><!-- end content -->
+
+		</div><!-- end inner -->
+	</div><!-- end outer -->
+ 	<div id="footer"><h1 align=center>EXAMEN JAVASCRIPT 2º Parcial</h1></div>
+</div><!-- end container -->
+</body>
+</html>
